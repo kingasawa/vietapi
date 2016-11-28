@@ -37,11 +37,14 @@ $(function() {
 
   socket.on('find/actors',function(recieve) {
     recieve.msg.forEach(function(data) {
-      console.log(data.id);
-      console.log(data.title);
+      console.log(data);
       var newThumb = data.thumbnail.split('@@.');
-      console.log(newThumb[0]+'@@._V1_SX738_CR0,0,738,999_AL_.jpg');
-
+      var actorThumb = newThumb[0]+'@@';
+      $('#result-actor .hinhanh-dienvien img').attr('src',actorThumb);
+      $('#result-actor .dulieu-dienvien h2').text(data.title);
+      $('#result-actor .dulieu-dienvien').find('h5.id-actor').html(data.id);
+      $('#result-noactor').addClass('sr-only');
+      $('#result-actor').removeClass('sr-only');
     })
   });
 
