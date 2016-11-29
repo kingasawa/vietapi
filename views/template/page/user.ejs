@@ -1,0 +1,82 @@
+<%- partial ('../navbar.ejs') %>
+<div class="container-fluid">
+  <div class="row content">
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#main-side">Data Phim</a></li>
+      <li><a data-toggle="tab" href="#actor-data">Data Diễn Viên</a></li>
+      <li><a data-toggle="tab" href="#link-movie">Link Phim</a></li>
+    </ul>
+    <div class="tab-content">
+      <!--Main-Side-->
+    <div id="main-side" class="tab-pane fade in active col-sm-12">
+
+      <form id="getDataMovie" class="form-inline">
+        <div class="form-group">
+          <label for="filter">Tìm theo:</label>
+          <select class="input-lg form-control" name="filter">
+            <option value="name-movie">Tên phim</option>
+            <option value="title-movie">Title ID</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="text" class="input-lg form-control" id="putdata" name="putdata" placeholder="Nhập dữ liệu">
+        </div>
+        <button type="submit" class="getDataMovie btn btn-success"> Lấy kết quả <i class="sr-only fa fa-spinner fa-pulse fa-fw"></i></button>
+      </form>
+      <p class="luu-y">Lưu ý: bạn phải nhập tên tiếng anh của phim , nếu không ra kết quả hãy thử nhập bằng title id của phim, lấy từ imdb.com </p>
+
+      <hr>
+      <div id="result-data" class="sr-only">
+
+        <div class="col-sm-3 hinhanh-phim text-center"><img class="img-responsive img-thumbnail" src=""></div>
+        <div class="col-sm-9 dulieu-phim">
+        <h2></h2>
+        <h5 class="year-phim"></h5>
+        <h5 class="time-phim"><span class="glyphicon glyphicon-time"></span></h5>
+        <h5>Đạo Diễn: <span class="daodien-phim"></span></h5>
+        <h5>Diễn Viên: <span class="dienvien-phim"></span></h5>
+        <h5>Điểm IMDB: <span class="diem-phim"></span></h5>
+        <h5>Thể Loại: <span class="theloai-phim"></span></h5>
+          <br><br>
+        </div>
+      </div>
+      <div id="result-nodata" class="sr-only"></div>
+    </div>
+      <!--End Main Side-->
+
+      <div id="actor-data" class="tab-pane fade">
+        <form id="getActorName" class="form-inline">
+
+          <div class="form-group">
+            <label for="filter">Nhập tên:</label>
+            <input type="text" class="input-lg form-control" id="name" name="name" placeholder="Nhập tên diễn viên">
+          </div>
+          <button type="submit" class="getActor btn btn-success"> Lấy kết quả <i class="sr-only fa fa-spinner fa-pulse fa-fw"></i></button>
+        </form>
+        <p class="luu-y">Lưu ý: bạn phải nhập tên tiếng anh của phim , nếu không ra kết quả hãy thử nhập bằng title id của phim, lấy từ imdb.com </p>
+
+        <hr>
+        <div id="result-data" class="sr-only">
+
+          <div class="col-sm-3 hinhanh-phim text-center"><img class="img-responsive img-thumbnail" src=""></div>
+          <div class="col-sm-9 dulieu-phim">
+            <h2></h2>
+            <h5 class="year-phim"></h5>
+            <h5 class="time-phim"><span class="glyphicon glyphicon-time"></span></h5>
+            <h5>Đạo Diễn: <span class="daodien-phim"></span></h5>
+            <h5>Diễn Viên: <span class="dienvien-phim"></span></h5>
+            <h5>Điểm IMDB: <span class="diem-phim"></span></h5>
+            <h5>Thể Loại: <span class="theloai-phim"></span></h5>
+            <br><br>
+          </div>
+        </div>
+        <div id="result-nodata" class="sr-only"></div>
+      </div>
+      <div id="link-movie" class="tab-pane fade">
+        <h3>Menu 2</h3>
+        <p>Some content in menu 2.</p>
+      </div>
+
+    </div>
+  </div>
+</div>

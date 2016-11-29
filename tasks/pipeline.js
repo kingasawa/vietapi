@@ -17,7 +17,10 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  'styles/**/*.css'
+  'styles/**/*.css',
+  'bootstrap/css/bootstrap-editable.css',
+  'font-awesome/css/font-awesome.min.css'
+
 ];
 
 
@@ -27,13 +30,16 @@ var jsFilesToInject = [
 
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
-
+  'js/plugins/jquery.min.js',
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
-
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
-  'js/**/*.js'
+
+  'js/bootstrap.min.js',
+  'js/main.js',
+  'js/bootstrap-editable.min.js'
+  // 'ckeditor/config.js'
 ];
 
 
